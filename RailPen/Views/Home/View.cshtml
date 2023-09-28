@@ -13,21 +13,26 @@
                 Back to List
             </a>
         </div>
-        <div class="border">
-            <div>
-                @Model.Gender
+        <div class="border p-4">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" value="@Model.Gender" disabled>
+                <label for="floatingInput"> @Html.DisplayNameFor(Model => Model.Gender)</label>
             </div>
-            <div>
-                @Model.PensionReferenceNumber
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" value="@Model.PensionReferenceNumber" disabled>
+                <label for="floatingInput"> @Html.DisplayNameFor(Model => Model.PensionReferenceNumber)</label>
             </div>
-            <div>
-                @Model.TargetRetirementAge
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" value="@Model.TargetRetirementAge" disabled>
+                <label for="floatingInput"> Target Retirement Age</label>
             </div>
-            <div>
-                @Model.DateOfBirth
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" value="@Model.DateOfBirth.ToShortDateString()" disabled>
+                <label for="floatingInput"> @Html.DisplayNameFor(Model => Model.DateOfBirth)</label>
             </div>
-            <div>
-                @Model.DateOfRetirement
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" value="@Model.DateOfRetirement.ToShortDateString()" disabled>
+                <label for="floatingInput"> @Html.DisplayNameFor(Model => Model.DateOfRetirement)</label>
             </div>
         </div>
     </div>
