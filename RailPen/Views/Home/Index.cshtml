@@ -1,8 +1,49 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model List<Member>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-orange">
+                Member List
+            </h2>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr class="text-primary">
+                <th>
+                    Name
+                </th>
+                <th>
+                    Pension Reference Number
+                </th>
+                <th>
+                    Target Retirement Age
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th>
+                    Retirement Date
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td>@obj.FirstName @obj.LastName</td>
+                    <td>@obj.PensionReferenceNumber</td>
+                    <td>@obj.TargetRetirementAge</td>
+                    <td>@obj.Gender</td>
+                    <td>@obj.DateOfRetirement.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
