@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "View Page";
+}
+@model Member
+
+<div class="container">
+    <div class="row pt-4 pb-3">
+        <div class="col-6 d-flex flex-row align-items-center py-2">
+            <h2 class="text-orange">
+                @Model.FirstName @Model.LastName
+            </h2>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary mx-2 rounded">
+                Back to List
+            </a>
+        </div>
+        <div class="border">
+            <div>
+                @Model.Gender
+            </div>
+            <div>
+                @Model.PensionReferenceNumber
+            </div>
+            <div>
+                @Model.TargetRetirementAge
+            </div>
+            <div>
+                @Model.DateOfBirth
+            </div>
+            <div>
+                @Model.DateOfRetirement
+            </div>
+        </div>
+    </div>
+</div>

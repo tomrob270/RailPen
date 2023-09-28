@@ -21,6 +21,18 @@ namespace RailPen.Controllers
             return View(list);
         }
 
+        public IActionResult View(int? id)
+        {
+            if (id == null || id == 0)
+                return NotFound();
+
+            Member? member = _memberRepository.Get(u => u.Id == id);
+            if (member == null)
+                return NotFound();
+
+            return View(member);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
