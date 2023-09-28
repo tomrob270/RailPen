@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "mssql1": {
-      "serviceConnectorResourceId": "",
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/RailPen/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsRailPenLive_96B3239A21",
       "secretStore": "AzureAppSettings",
-      "type": "mssql.onprem",
-      "connectionId": "ConnectionStrings:DefaultConnection",
-      "dynamicId": null
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/railpen/databases/RailPen-Live",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:RailPenLive"
     }
   }
 }
