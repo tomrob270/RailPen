@@ -42,6 +42,13 @@
                     <td>@obj.TargetRetirementAge</td>
                     <td>@obj.Gender</td>
                     <td>@obj.DateOfRetirement.ToShortDateString()</td>
+                    <td>
+                        <div class="btn btn-primary rounded">
+                            <a asp-controller="Home" asp-action="View" asp-route-id="@obj.Id" class="mx-2 text-decoration-none">
+                                <i class="bi bi-eye"></i> View
+                            </a>
+                        </div>
+                    </td>
                 </tr>
             }
         </tbody>
